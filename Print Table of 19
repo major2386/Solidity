@@ -1,0 +1,26 @@
+
+//This program is used to print the table of 19 taking the length input from user
+pragma solidity ^0.4.10;
+contract tableof19 {       //name of the contract
+    address creator;
+     uint i;
+     uint[] mul1;
+    event test(uint a, uint mul ,uint mul3);
+     
+     function tableof19 () {       // constructor with the same name as the contract
+         creator = msg.sender;
+ }
+     function table(uint len)  {             
+ for ( i =0; i < len; i++){
+    mul1.push(19 * (i+1));     // pushing the values into the array
+     test (19, i, mul1[i]);
+        }
+      }
+    
+    function returnarray () constant returns (uint []){
+        
+        return mul1;
+        
+    }  
+     }
+     
